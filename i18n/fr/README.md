@@ -132,6 +132,21 @@ PRs bienvenues — corrections, traductions, nouveaux benchmarks, nouveaux outil
 
 ---
 
+## Mainteneur
+
+**AI小蓝鲸** — je publie sur l'IA et les modèles open-source en chinois. Même pseudo sur toutes les plateformes :
+
+| Plateforme | Pseudo |
+|---|---|
+| 📕 Xiaohongshu (小红书) | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 Bilibili (B站) | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 Douyin (抖音) | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 WeChat Channels (视频号) | **AI小蓝鲸** (à rechercher dans WeChat) |
+
+Les PRs sont bienvenues quelle que soit la plateforme.
+
+---
+
 <div align="center">
 
 Mettez ⭐ si ce dépôt vous fait gagner du temps.

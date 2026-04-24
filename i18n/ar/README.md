@@ -138,6 +138,25 @@ PRs مرحب بها — التصحيحات والترجمات والمعايير
 
 ---
 
+<div dir="rtl">
+
+## القائم على الصيانة
+
+**AI小蓝鲸** — أنشر عن الذكاء الاصطناعي والنماذج مفتوحة الأوزان باللغة الصينية. نفس الاسم على جميع المنصات:
+
+| المنصة | الحساب |
+|---|---|
+| 📕 Xiaohongshu (小红书) | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 Bilibili (B站) | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 Douyin (抖音) | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 WeChat Channels (视频号) | **AI小蓝鲸** (البحث داخل WeChat) |
+
+PRs مرحب بها من أي منصة.
+
+</div>
+
+---
+
 <div align="center">
 
 ضع ⭐ إذا وفّر عليك هذا المستودع وقتًا.

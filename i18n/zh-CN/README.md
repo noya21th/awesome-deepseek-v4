@@ -134,6 +134,21 @@ print(msg.content[0].text)
 
 ---
 
+## 作者
+
+**AI小蓝鲸** —— 在中文平台分享 AI 与开源模型内容。四个平台同名：
+
+| 平台 | 账号 |
+|---|---|
+| 📕 小红书 | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 B 站 | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 抖音 | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 视频号 | **AI小蓝鲸**（微信内搜索） |
+
+欢迎所有平台来的 Issue / PR。
+
+---
+
 <div align="center">
 
 帮到你就点 ⭐。发现错误或缺失欢迎 Issue / PR。

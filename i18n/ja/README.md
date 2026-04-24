@@ -132,6 +132,21 @@ PR 歓迎 — 訂正・翻訳・ベンチマーク再現・コミュニティツ
 
 ---
 
+## メンテナー
+
+**AI小蓝鲸** — 中国のプラットフォームで AI とオープンモデルについて発信しています。全プラットフォームで同じハンドル：
+
+| プラットフォーム | アカウント |
+|---|---|
+| 📕 Xiaohongshu (小红书) | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 Bilibili (B站) | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 Douyin (抖音) | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 WeChat Channels (视频号) | **AI小蓝鲸** (WeChat 内で検索) |
+
+どのプラットフォームからの PR でも歓迎します。
+
+---
+
 <div align="center">
 
 時間の節約になったら ⭐ をお願いします。

@@ -137,6 +137,21 @@ Especially wanted: native-speaker review of Arabic, Hindi, Japanese, German, Fre
 
 ---
 
+## Maintained by
+
+**AI小蓝鲸** — I post about AI and open models in Chinese. Same handle across platforms:
+
+| Platform | Handle |
+|---|---|
+| 📕 Xiaohongshu (小红书) | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 Bilibili (B站) | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 Douyin (抖音) | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 WeChat Channels (视频号) | **AI小蓝鲸** (search inside WeChat) |
+
+PRs from everywhere are welcome regardless of platform.
+
+---
+
 <div align="center">
 
 Star ⭐ if this saves you time. Open an issue or PR if anything is wrong or missing.

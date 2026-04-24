@@ -132,6 +132,21 @@ PRs स्वागत है — सुधार, अनुवाद, नए �
 
 ---
 
+## अनुरक्षक
+
+**AI小蓝鲸** — मैं चीनी प्लेटफ़ॉर्म पर AI और ओपन मॉडल के बारे में लिखता हूँ। सभी प्लेटफ़ॉर्म पर एक ही हैंडल:
+
+| प्लेटफ़ॉर्म | हैंडल |
+|---|---|
+| 📕 Xiaohongshu (小红书) | [AI小蓝鲸](https://www.xiaohongshu.com/search_result?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8&type=54) |
+| 📺 Bilibili (B站) | [AI小蓝鲸](https://search.bilibili.com/upuser?keyword=AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎵 Douyin (抖音) | [AI小蓝鲸](https://www.douyin.com/search/AI%E5%B0%8F%E8%93%9D%E9%B2%B8) |
+| 🎬 WeChat Channels (视频号) | **AI小蓝鲸** (WeChat के भीतर खोजें) |
+
+किसी भी प्लेटफ़ॉर्म से PR का स्वागत है।
+
+---
+
 <div align="center">
 
 समय बचाया तो ⭐ कर दें।
