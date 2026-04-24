@@ -84,10 +84,12 @@ print(msg.content[0].text)
 - [**对比表**](../../docs/comparison.md) — V4 vs Claude / GPT / Gemini / Qwen / Llama / Mistral / GLM
 
 ### 真正能用的东西
-- [**配方集**](../../docs/recipes.md) — **10 个可复制粘贴模式** + 成本估算：整仓库审查、长文档 QA、Agent、批量流水线、数学导师、LiteLLM 多厂商容灾、自托管、Aider、Cline、合成数据。
-- [**提示词指南**](../../docs/prompting-guide.md)
-- [**微调**](../../docs/fine-tuning.md) — LoRA / QLoRA / 全量微调
-- [**FAQ**](../../docs/faq.md)
+- [**配方集**](./docs/recipes.md) 🇨🇳 — **10 个可复制粘贴模式** + 成本估算：整仓库审查、长文档 QA、Agent、批量流水线、数学导师、LiteLLM 多厂商容灾、自托管、Aider、Cline、合成数据。
+- [**提示词指南**](../../docs/prompting-guide.md) ⚠️ 英文
+- [**微调**](../../docs/fine-tuning.md) ⚠️ 英文 — LoRA / QLoRA / 全量微调
+- [**FAQ**](./docs/faq.md) 🇨🇳
+
+> *目前只翻译了"配方集"与"FAQ"这两篇最高价值的详细文档。其他详细页面仍为英文 —— 欢迎通过 PR 贡献翻译（见 [CONTRIBUTING](../../CONTRIBUTING.md)）。*
 
 ### 资源
 - [官方链接](../../resources/official-links.md)

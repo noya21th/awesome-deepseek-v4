@@ -82,10 +82,12 @@ Plus : [quickstart API](../../getting-started/api-quickstart.md) · [mode Thinki
 - [**Tableaux comparatifs**](../../docs/comparison.md)
 
 ### Pour travailler
-- [**Recettes**](../../docs/recipes.md) — **10 patterns prêts à copier-coller** avec estimations de coût.
-- [**Guide de prompting**](../../docs/prompting-guide.md)
-- [**Fine-tuning**](../../docs/fine-tuning.md)
-- [**FAQ**](../../docs/faq.md)
+- [**Recettes**](./docs/recipes.md) 🇫🇷 — **10 patterns prêts à copier-coller** avec estimations de coût.
+- [**Guide de prompting**](../../docs/prompting-guide.md) ⚠️ anglais
+- [**Fine-tuning**](../../docs/fine-tuning.md) ⚠️ anglais
+- [**FAQ**](./docs/faq.md) 🇫🇷
+
+> *Seuls les deux documents détaillés à plus forte valeur — Recettes et FAQ — sont traduits. Les autres pages détaillées restent en anglais. Contributions de traduction bienvenues par PR (voir [CONTRIBUTING](../../CONTRIBUTING.md)).*
 
 ### Ressources
 - [Liens officiels](../../resources/official-links.md)

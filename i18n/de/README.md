@@ -82,10 +82,12 @@ Mehr: [API-Quickstart](../../getting-started/api-quickstart.md) · [Thinking-Mod
 - [**Vergleichstabellen**](../../docs/comparison.md)
 
 ### Für echte Arbeit
-- [**Rezepte**](../../docs/recipes.md) — **10 Copy-Paste-Muster** mit Kostenschätzung.
-- [**Prompting-Leitfaden**](../../docs/prompting-guide.md)
-- [**Fine-Tuning**](../../docs/fine-tuning.md)
-- [**FAQ**](../../docs/faq.md)
+- [**Rezepte**](./docs/recipes.md) 🇩🇪 — **10 Copy-Paste-Muster** mit Kostenschätzung.
+- [**Prompting-Leitfaden**](../../docs/prompting-guide.md) ⚠️ Englisch
+- [**Fine-Tuning**](../../docs/fine-tuning.md) ⚠️ Englisch
+- [**FAQ**](./docs/faq.md) 🇩🇪
+
+> *Aktuell sind nur die zwei wertvollsten Detaildokumente — Rezepte und FAQ — ins Deutsche übersetzt. Andere Seiten bleiben englisch. Übersetzungsbeiträge willkommen per PR (siehe [CONTRIBUTING](../../CONTRIBUTING.md)).*
 
 ### Ressourcen
 - [Offizielle Links](../../resources/official-links.md)

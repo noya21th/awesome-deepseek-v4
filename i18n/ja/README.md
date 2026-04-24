@@ -82,10 +82,12 @@ print(msg.content[0].text)
 - [**比較表**](../../docs/comparison.md)
 
 ### 実作業用
-- [**レシピ集**](../../docs/recipes.md) — **コピペで動く10パターン**（コスト見積もり付き）
-- [**プロンプトガイド**](../../docs/prompting-guide.md)
-- [**ファインチューニング**](../../docs/fine-tuning.md)
-- [**FAQ**](../../docs/faq.md)
+- [**レシピ集**](./docs/recipes.md) 🇯🇵 — **コピペで動く10パターン**（コスト見積もり付き）
+- [**プロンプトガイド**](../../docs/prompting-guide.md) ⚠️ 英語
+- [**ファインチューニング**](../../docs/fine-tuning.md) ⚠️ 英語
+- [**FAQ**](./docs/faq.md) 🇯🇵
+
+> *現在、最も価値の高い「レシピ集」と「FAQ」のみ日本語化されています。他の詳細ページは英語のままです — PRでの翻訳協力を歓迎します（[CONTRIBUTING](../../CONTRIBUTING.md) 参照）。*
 
 ### リソース
 - [公式リンク](../../resources/official-links.md)
