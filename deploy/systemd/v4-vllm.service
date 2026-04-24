@@ -1,0 +1,51 @@
+# systemd unit for a bare-metal V4-Flash inference server.
+#
+# Install:
+#   1. Copy to /etc/systemd/system/v4-vllm.service
+#   2. Edit User, Group, WorkingDirectory, EnvironmentFile below.
+#   3. sudo systemctl daemon-reload
+#   4. sudo systemctl enable --now v4-vllm
+#
+# Logs: journalctl -u v4-vllm -f
+
+[Unit]
+Description=DeepSeek V4-Flash via vLLM (OpenAI-compatible API)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=vllm
+Group=vllm
+WorkingDirectory=/opt/v4-vllm
+EnvironmentFile=/opt/v4-vllm/env
+
+# Optional: preload HF cache to a large NVMe
+Environment=HF_HOME=/opt/v4-vllm/hf-cache
+Environment=HF_HUB_ENABLE_HF_TRANSFER=1
+
+ExecStart=/opt/v4-vllm/.venv/bin/python -m vllm.entrypoints.openai.api_server \
+  --model deepseek-ai/DeepSeek-V4-Flash \
+  --served-model-name deepseek-v4-flash \
+  --tensor-parallel-size 8 \
+  --max-model-len 1048576 \
+  --quantization fp8 \
+  --trust-remote-code \
+  --host 0.0.0.0 \
+  --port 8000
+
+Restart=on-failure
+RestartSec=30
+# vLLM needs file descriptors + shared memory
+LimitNOFILE=1048576
+LimitMEMLOCK=infinity
+
+# Security hardening (comment out if you hit permission issues)
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/v4-vllm
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

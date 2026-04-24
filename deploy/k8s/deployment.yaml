@@ -1,0 +1,85 @@
+# Kubernetes Deployment + Service + ConfigMap for V4-Flash on vLLM.
+#
+# Assumes a GPU node pool with 8× H100 or H200 per node and the NVIDIA
+# device plugin installed. Adjust `nvidia.com/gpu: 8` to match.
+#
+#   kubectl apply -f deployment.yaml
+#
+# For V4-Pro, set MODEL_NAME to DeepSeek-V4-Pro, raise tensor-parallel-size
+# to 16, and schedule across 2 nodes (topologySpreadConstraints below).
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: v4-vllm-config
+data:
+  MODEL_ID: "deepseek-ai/DeepSeek-V4-Flash"
+  SERVED_NAME: "deepseek-v4-flash"
+  TP_SIZE: "8"
+  MAX_MODEL_LEN: "1048576"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v4-vllm
+  labels: { app: v4-vllm }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: v4-vllm }
+  template:
+    metadata:
+      labels: { app: v4-vllm }
+    spec:
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef: { name: v4-vllm-config }
+          env:
+            - name: HF_HUB_ENABLE_HF_TRANSFER
+              value: "1"
+          args:
+            - "--model=$(MODEL_ID)"
+            - "--served-model-name=$(SERVED_NAME)"
+            - "--tensor-parallel-size=$(TP_SIZE)"
+            - "--max-model-len=$(MAX_MODEL_LEN)"
+            - "--quantization=fp8"
+            - "--trust-remote-code"
+            - "--host=0.0.0.0"
+            - "--port=8000"
+          resources:
+            limits:
+              nvidia.com/gpu: 8
+              memory: 256Gi
+            requests:
+              nvidia.com/gpu: 8
+              memory: 128Gi
+          readinessProbe:
+            httpGet: { path: /v1/models, port: 8000 }
+            initialDelaySeconds: 120
+            periodSeconds: 15
+          livenessProbe:
+            httpGet: { path: /health, port: 8000 }
+            initialDelaySeconds: 600
+            periodSeconds: 30
+          volumeMounts:
+            - name: hf-cache
+              mountPath: /root/.cache/huggingface
+      volumes:
+        - name: hf-cache
+          emptyDir: { sizeLimit: 500Gi }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v4-vllm
+spec:
+  selector: { app: v4-vllm }
+  ports:
+    - name: openai
+      port: 80
+      targetPort: 8000
+  type: ClusterIP

@@ -1,0 +1,51 @@
+# One-command self-host of DeepSeek V4-Flash via vLLM, exposing an
+# OpenAI-compatible endpoint on :8000.
+#
+#   docker compose up -d
+#
+# Requirements:
+#   - NVIDIA Container Toolkit installed
+#   - At least 8× H100 80GB (or 4× H200 141GB) — adjust --tensor-parallel-size
+#   - ~200GB disk for weights download on first run
+#
+# Switch to V4-Pro by editing the --model flag and raising --tensor-parallel-size.
+
+services:
+  v4-vllm:
+    image: vllm/vllm-openai:latest
+    container_name: v4-vllm
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    ipc: host
+    environment:
+      - HF_HUB_ENABLE_HF_TRANSFER=1
+      # If your model is gated or you want to avoid anonymous rate limits:
+      # - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - ./hf-cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command:
+      - --model=deepseek-ai/DeepSeek-V4-Flash
+      - --tensor-parallel-size=8
+      - --max-model-len=1048576
+      - --quantization=fp8
+      - --trust-remote-code
+      - --served-model-name=deepseek-v4-flash
+      - --host=0.0.0.0
+      - --port=8000
+
+  # Optional: simple health-check / first-run smoke test.
+  # Uncomment to run after v4-vllm is up.
+  # smoketest:
+  #   image: curlimages/curl:latest
+  #   depends_on: [v4-vllm]
+  #   entrypoint: ["sh", "-c"]
+  #   command: |
+  #     "sleep 30 && curl -sf http://v4-vllm:8000/v1/models"

@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+*.pyc
+__pycache__/
+.venv/
+venv/
+env/
+.env
+.env.local
+*.log
+.idea/
+.vscode/
+node_modules/
+
+# Local-only project notes (not for public repo)
+CLAUDE.md
+项目说明.md
